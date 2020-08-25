@@ -20,6 +20,7 @@
         <module name="cloud-provider-payment8001" />
         <module name="cloud-provider-payment8006" />
         <module name="cloud-consumer-feign-hystrix-order80" />
+        <module name="cloud-stream-rabbitmq-provider8801" />
         <module name="cloud-gatway-gatway9527" />
         <module name="cloud-config-client3355" />
         <module name="cloudconsumerorder80" />

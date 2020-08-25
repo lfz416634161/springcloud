@@ -20,7 +20,8 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka
 
-# 暴露健康端点 配上refreshScope 修改配置的时候 贵重启， 动态热部署 需要运维人员必须post请求 curl -X POST "http://localhost:3355/actuator/refresh"
+#暴露bus刷新配置端点 在cmd中 curl -X POST "http://localhost:3344/actuator/bus-refresh" 刷新3344 就会让3355等配置他的都会生效
+# 局部更新 curl -X POST "http://localhost:3344/actuator/bus-refresh/cloud-client:3355  局部更新值通知3355
 management:
   endpoints:
     web:
