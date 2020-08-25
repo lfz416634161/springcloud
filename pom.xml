@@ -25,6 +25,9 @@
     <module>cloud-consumer-feign-hystrix-order80</module>
     <module>cloud-consumer-hystrix-dashboard9002</module>
       <module>cloud-gatway-gatway9527</module>
+      <module>cloud-config-center-3344</module>
+      <module>cloud-config-client3355</module>
+      <module>cloud-config-client3366</module>
   </modules>
 
   <name>Maven</name>

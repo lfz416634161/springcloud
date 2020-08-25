@@ -1,0 +1,28 @@
+server:
+  port: 3366
+spring:
+  application:
+    name: config-client
+  cloud:
+    config: # http://localhost:3355/configInfo
+      label: master #分支名稱
+      name: config #配置文件名稱
+      profile: dev #读取配置文件 config-dev文件
+      uri: http://localhost:3344 # 配置中心地址
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka
+
+# 暴露健康端点 配上refreshScope 修改配置的时候 贵重启， 动态热部署 需要运维人员必须post请求 curl -X POST "http://localhost:3355/actuator/refresh"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
